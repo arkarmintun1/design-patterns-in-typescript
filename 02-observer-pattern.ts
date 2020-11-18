@@ -7,7 +7,7 @@
  * subjects and observers are loosely coupled
  */
 interface Observer {
-  update(temp: Number, humidity: Number, pressure: Number): void;
+  update(temp: number, humidity: number, pressure: number): void;
 }
 
 interface Subject {
@@ -22,9 +22,9 @@ interface DisplayElement {
 
 class WeatherData implements Subject {
   private observers: Array<Observer>;
-  private temperature: Number;
-  private humidity: Number;
-  private pressure: Number;
+  private temperature: number;
+  private humidity: number;
+  private pressure: number;
 
   constructor() {
     this.observers = new Array<Observer>();
@@ -52,9 +52,9 @@ class WeatherData implements Subject {
   }
 
   setMeasurements(
-    temperature: Number,
-    humidity: Number,
-    pressure: Number
+    temperature: number,
+    humidity: number,
+    pressure: number
   ): void {
     this.temperature = temperature;
     this.humidity = humidity;
@@ -64,8 +64,8 @@ class WeatherData implements Subject {
 }
 
 class CurrentConditionDisplay implements Observer, DisplayElement {
-  private temperature: Number;
-  private humidity: Number;
+  private temperature: number;
+  private humidity: number;
   private weatherData: Subject;
 
   constructor(weatherData: Subject) {
@@ -79,7 +79,7 @@ class CurrentConditionDisplay implements Observer, DisplayElement {
     );
   }
 
-  update(temperature: Number, humidity: Number, pressure: Number): void {
+  update(temperature: number, humidity: number, pressure: number): void {
     this.temperature = temperature;
     this.humidity = humidity;
     this.display();
