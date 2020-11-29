@@ -4,6 +4,10 @@
  * Strategy lets the algorithm vary independently from
  * clients that use it.
  */
+
+/**
+ * Abstract Duck class
+ */
 abstract class Duck {
   flyBehavior: FlyBehavior;
   quackBehavior: QuackBehavior;
@@ -29,8 +33,11 @@ abstract class Duck {
   }
 }
 
+/**
+ * Fly Behavior
+ */
 interface FlyBehavior {
-  fly();
+  fly(): void;
 }
 
 class FlyWithWings implements FlyBehavior {
@@ -45,8 +52,11 @@ class FlyNoWay implements FlyBehavior {
   }
 }
 
+/**
+ * Quack Behavior
+ */
 interface QuackBehavior {
-  quack();
+  quack(): void;
 }
 
 class Quack implements QuackBehavior {
@@ -67,6 +77,9 @@ class MuteQuack implements QuackBehavior {
   }
 }
 
+/**
+ * Ducks
+ */
 class MallardDuck extends Duck {
   constructor() {
     super();

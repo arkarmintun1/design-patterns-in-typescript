@@ -2,7 +2,7 @@
 
 - Reference: **Head First Design Patterns**
 
-## OO Principles
+## OO Design Principles
 
 - Encapsulate what varies
 - Favor composition over inheritance
