@@ -37,7 +37,7 @@ class CheesePizza extends Pizza {
   }
 
   prepare(): void {
-    console.log('Preparing ' + name);
+    console.log('Preparing ' + this.name);
     this.dough = this.ingredientFactory.createDough();
     this.sauce = this.ingredientFactory.createSauce();
     this.cheese = this.ingredientFactory.createCheese();
@@ -53,7 +53,7 @@ class VeggiePizza extends Pizza {
   }
 
   prepare(): void {
-    console.log('Preparing ' + name);
+    console.log('Preparing ' + this.name);
     this.dough = this.ingredientFactory.createDough();
     this.sauce = this.ingredientFactory.createSauce();
     this.veggies = this.ingredientFactory.createVeggies();
@@ -69,7 +69,7 @@ class ClamPizza extends Pizza {
   }
 
   prepare(): void {
-    console.log('Preparing ' + name);
+    console.log('Preparing ' + this.name);
     this.dough = this.ingredientFactory.createDough();
     this.sauce = this.ingredientFactory.createSauce();
     this.cheese = this.ingredientFactory.createCheese();
@@ -86,7 +86,7 @@ class PepperoniPizza extends Pizza {
   }
 
   prepare(): void {
-    console.log('Preparing ' + name);
+    console.log('Preparing ' + this.name);
     this.dough = this.ingredientFactory.createDough();
     this.sauce = this.ingredientFactory.createSauce();
     this.pepperoni = this.ingredientFactory.createPepperoni();
